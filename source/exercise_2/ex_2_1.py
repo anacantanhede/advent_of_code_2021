@@ -4,18 +4,19 @@ class SubmarinePosition:
         self.depth = 0
 
     def move(self, direction, value):
-        if direction == 'forward':
-            self.horizontal_position+= int(value)
-        elif direction == 'down':
+        if direction == "forward":
+            self.horizontal_position += int(value)
+        elif direction == "down":
             self.depth += int(value)
-        elif direction == 'up':
+        elif direction == "up":
             self.depth -= int(value)
         else:
             print("INVALID DIRECTION: ", direction)
         return self
-    
+
     def end_position(self):
         return self.horizontal_position * self.depth
+
 
 position = SubmarinePosition()
 with open("./input.txt") as file:
