@@ -36,18 +36,12 @@ class Vector:
         return s
 
     def is_horizontal(self):
-        if (
-            self.point1.get_y() == self.point2.get_y()
-            and self.point1.get_x() != self.point2.get_x()
-        ):
+        if self.point1.get_y() == self.point2.get_y():
             return True
         return False
 
     def is_vertical(self):
-        if (
-            self.point1.get_x() == self.point2.get_x()
-            and self.point1.get_y() != self.point2.get_y()
-        ):
+        if self.point1.get_x() == self.point2.get_x():
             return True
         return False
 
